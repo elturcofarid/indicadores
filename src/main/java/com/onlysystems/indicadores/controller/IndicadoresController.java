@@ -55,6 +55,12 @@ public class IndicadoresController {
             return "Hello, World!";
         }
 
+    @GetMapping("/cuenta")
+    public String sayHello2() {
+        System.out.println("Servicio:::: " + indicadoresServices.consultarDatos());
+        return "Hello, cuenta!";
+    }
+
 
     @GetMapping("/consultarReqXClientes")
     public String consultaRequerimientosClientes() {
@@ -66,25 +72,6 @@ public class IndicadoresController {
         return gson.toJson(tickets);
     }
 
-
-
-    @PostMapping("/convert")
-   // public ResponseEntity<byte[]> convertHtmlToPdf(@RequestParam("file") MultipartFile file) throws IOException {
-        public ResponseEntity<byte[]> convertHtmlToPdf(@RequestBody String htmlContent) throws IOException {
-        ByteArrayOutputStream target = new ByteArrayOutputStream();
-       // HtmlConverter.convertToPdf(file.getInputStream(), target);
-        HtmlConverter.convertToPdf(new ByteArrayInputStream(htmlContent.getBytes()), target);
-
-        byte[] bytes = target.toByteArray();
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=document.pdf");
-
-        return ResponseEntity.ok()
-                .headers(headers)
-                .contentType(MediaType.APPLICATION_PDF)
-                .body(bytes);
-    }
 
 
     }

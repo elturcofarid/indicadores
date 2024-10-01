@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface IndicadoresRepository  extends JpaRepository<RegistrosModel, Integer> {
 
+    int countByTipoServicio(String tipo);
+
 }

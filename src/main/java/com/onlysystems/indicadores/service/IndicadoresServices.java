@@ -13,4 +13,6 @@ public interface IndicadoresServices {
     String consultarDatosxfechas(List<RegistrosModel> registro);
 
     Map<String, Long> consultaRequerimientosClientesAll();
+
+    int consultarDatos();
 }

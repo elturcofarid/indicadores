@@ -34,5 +34,10 @@ public class IndicadoresServicesImpl implements IndicadoresServices{
                 .collect(Collectors.groupingBy(RegistrosModel::getCliente, Collectors.counting()));
     }
 
+    @Override
+    public int consultarDatos(){
+        return indicadoresRepository.countByTipoServicio("SERVICIO INTERNO");
+    }
+
 
 }
