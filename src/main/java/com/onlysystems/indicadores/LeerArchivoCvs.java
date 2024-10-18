@@ -17,7 +17,7 @@ import java.util.Locale;
 
 public class LeerArchivoCvs {
 
-
+/*
         public List<RegistrosModel> readCSV(String filePath) {
             List<RegistrosModel> registroList = new ArrayList<>();
 
@@ -270,5 +270,7 @@ public class LeerArchivoCvs {
         private float convertir(float numero){
             return Math.round(numero * 100) / 100f;
         }
+
+ */
 
 }

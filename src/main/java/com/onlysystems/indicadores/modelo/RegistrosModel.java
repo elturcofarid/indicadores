@@ -16,10 +16,10 @@ public class RegistrosModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // o GenerationType.AUTO según tu base de datos
     private Long id;
 
-    private int ticket ;
+    private String ticket ;
     private String titulo;
-    private Timestamp creado;
-    private Timestamp last_changed;
+    private String creado;
+    private String last_changed;
     private String fecha_cierre;
     private String cola;
     private String estado;
